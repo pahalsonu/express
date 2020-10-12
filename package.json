@@ -1,0 +1,19 @@
+{
+  "name": "basics",
+  "version": "1.0.0",
+  "description": "Express Bascis",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev" : "nodemon app.js"
+  },
+  "author": "Sonu Pahal",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "expess": "0.0.1-security",
+    "express": "^4.17.1"
+  }
+}
