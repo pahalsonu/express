@@ -1,19 +1,25 @@
 const express = require('express');
 const app = express();
-
+const bodyParser = require('body-parser');
 const port = process.env.PORT || 3000;
+
+app.use(bodyParser.raw({ type: 'application/vnd.custom-type' }))
+
 app.use((req, res, next) =>{
     console.log(req.query);
     console.log("i am the primary hit")
+    console.log(req.body)
     next();
-
 });
+
 app.use((req, res, next) =>{
     console.log(req.query);
     console.log("i am the secondry hit hit")
     next();
 
-})
+});
+
+
 
 // app.get("", (req, res) => {
 //     res.send("Hello World")
