@@ -159,12 +159,12 @@ path*/
 //     res.send(req.params)
 // });
 
-// const pdfpath = path.join(__dirname, 'd.pdf')
-// app.get('/download', (req, res) => {
-//     //query params
-//     console.log(pdfpath)
-//     res.download(pdfpath)
-// });
+const pdfpath = path.join(__dirname, 'dummy.pdf')
+app.get('/download', (req, res) => {
+    //query params
+    console.log(pdfpath)
+    res.download(pdfpath)
+});
 
 // app.get('/redirect', (req, res) => {
 //     //query params
