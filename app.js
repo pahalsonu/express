@@ -159,31 +159,31 @@ path*/
 //     res.send(req.params)
 // });
 
-const pdfpath = path.join(__dirname, 'dummy.pdf')
-app.get('/download', (req, res) => {
-    //query params
-    console.log(pdfpath)
-    res.download(pdfpath)
-});
-
-// app.get('/redirect', (req, res) => {
+// const pdfpath = path.join(__dirname, 'dummy.pdf')
+// app.get('/download', (req, res) => {
 //     //query params
 //     console.log(pdfpath)
-//     res.redirect('/hello')
+//     res.download(pdfpath)
 // });
 
+app.get('/redirect', (req, res) => {
+    //query params
+   
+    res.redirect('/hello')
+});
 
-// app.get('/hello', (req, res) => {
-//     //query params
-
-//     res.sendStatus(301)
-// });
 
 app.get('/hello', (req, res) => {
     //query params
 
-    res.status(301).json({ "err": "moved" })
+    res.sendStatus(301)
 });
+
+// app.get('/hello', (req, res) => {
+//     //query params
+
+//     res.status(301).json({ "err": "moved" })
+// });
 
 // http://localhost:3000/flights/Delhi-Amastardam
 // { '0': '', from: 'Delhi', to: 'Amastardam' }
